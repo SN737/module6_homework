@@ -13,7 +13,6 @@ function digitAnaliser () {
         result =`Число ${x} простым не является`;
         return result;
     }
-
     if (x % 2 == 0) {
         answer = "не является простым";
     } else {
