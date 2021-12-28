@@ -15,10 +15,9 @@ function digitAnaliser () {
     }
 
     if (x % 2 == 0) {
-    answer = "не является простым";
+        answer = "не является простым";
     } else {
-            answer = "является простым";
-
+        answer = "является простым";
     }
     result = `Число ${x} ${answer}`;
     return result;
