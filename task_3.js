@@ -7,13 +7,13 @@
 // не уверен верно ли я понял задание, но сумму получил :) 
 let x = 5;
 let y = 6;
-function digit_1(x) {
-    return digit_2 (y);
+function master(x) {
+    return slave (y);
 }
 
-function digit_2(){
+function slave(){
     let result = x+y;
     console.log(result);
 }
 
-digit_1();
+master();
