@@ -3,9 +3,10 @@
 // Если введено больше 1 000, то выводится сообщение, что данные неверны. Обратите внимание на числа 0 и 1.
 
 //let x = prompt("Введите число от 0 до 1000");
-let x = 103;
+let x = 97;
 let answer = '';
-let result = 'error'
+let result = 'error';
+let flag = 0;
 
 function digitAnaliser () {
     if (x == 0 || x == 1) {
@@ -13,13 +14,20 @@ function digitAnaliser () {
         result =`Число ${x} простым не является`;
         return result;
     }
-    if (x % 2 == 0) {
-        answer = "не является простым";
-    } else {
-        answer = "является простым";
-    }
-    result = `Число ${x} ${answer}`;
-    return result;
+    for(let i = 2; i< x; i++){ 
+        if (x % i == 0 & flag == 0) {
+            answer = "не является простым";
+            flag = 1;
+            break;
+        } else {
+            answer = "является простым";
+        }
+    } 
+        result = `Число ${x} ${answer}`;
+        return result;
+
+    
+    
 }
 let getAnalaze = digitAnaliser ();
 console.log(getAnalaze);
