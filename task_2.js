@@ -6,7 +6,6 @@
 let x = 97;
 let answer = '';
 let result = 'error';
-let flag = 0;
 
 function digitAnaliser () {
     if (x == 0 || x == 1) {
@@ -15,9 +14,8 @@ function digitAnaliser () {
         return result;
     }
     for(let i = 2; i< x; i++){ 
-        if (x % i == 0 & flag == 0) {
+        if (x % i == 0) {
             answer = "не является простым";
-            flag = 1;
             break;
         } else {
             answer = "является простым";
@@ -25,9 +23,7 @@ function digitAnaliser () {
     } 
         result = `Число ${x} ${answer}`;
         return result;
-
-    
-    
+  
 }
 let getAnalaze = digitAnaliser ();
 console.log(getAnalaze);
